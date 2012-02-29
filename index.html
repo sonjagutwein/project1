@@ -7,22 +7,23 @@
   <link rel=stylesheet type="text/css" href="style.css">
   <script type="text/javascript">
 <!--
-  var result = 0;
+  
   function prize (){
+    var result = 0;
     var i;
     for (i = 0; i < 5; i++)
-      if (document.collection.elements[i].checked)
+      if (document.collection.elements[i].checked == true)
         result += Number(document.collection.elements[i].value);
-        document.collection.sum.value = result;
+    document.collection.sum.value = result;
   }
 </script>
 <style type="text/css"></style>
   </head>
-  <body onLoad="prize();" action="">
+  <body onLoad="prize(); draginit();" action="">
     <h1>Die neue Kollektion auf einen Blick!</h1>
       <form name="collection">
         <div id="shoe-collection">
-          <div class="image">
+          <div onmousedown="dragstart(this)" class="image">
           	<img src="shoes1.jpg"></img>
             <input type=checkbox name="prize[]" value="32" onClick="prize()">32 &euro;
           </div>
@@ -47,6 +48,10 @@
           <hr>
           Gesamtsumme:
           <textarea cols="5" rows="1" type=text name="sum" value="0" readonly></textarea> &euro;
+          <br>
+          <div id="shopping-basket">
+            <img src="warenkorb.gif"></img>
+          </div>
         </div>
       </form>
 	</body>
