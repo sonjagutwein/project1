@@ -1,4 +1,25 @@
+#shoe-collection {
+  width: 1200px;
+  height: 250px;
+  margin: 50px 30px;
+}
+
+h1 {
+  margin-left: 25px;
+}
+.image {
+  margin: 0px 25px;
+  float: left;
+  height: 250px;
+  width: 170px;
+  text-align: center;
+}
+
+#prize-container {
+  width: 1200px;
+  margin: 50px 30px;
+}
+
 .shoes {
-  color: red;
   font-weight: bold;
 }

@@ -4,26 +4,50 @@
 <html>
   <head>
     <title>Hallo</title>
-    <script language="JavaScript">
+  <link rel=stylesheet type="text/css" href="style.css">
+  <script type="text/javascript">
 <!--
- function Quadrat(Zahl)
-  {
-   var Ergebnis = document.Formular.Eingabe.value * document.Formular.Eingabe.value;
-   alert("Das Quadrat von " + document.Formular.Eingabe.value + " = " + Ergebnis);
+  var result = 0;
+  function prize (){
+    var i;
+    for (i = 0; i < 5; i++)
+      if (document.collection.elements[i].checked)
+        result += Number(document.collection.elements[i].value);
+        document.collection.sum.value = result;
   }
 </script>
-    <link rel=stylesheet type="text/css" href="style.css">
 <style type="text/css"></style>
   </head>
-  <body>
-    <h1>Test!</h1>
-      <div>
-      	<img src="IMG_0207.jpg"></img>
-      </div>
-      <span class="shoes">Meine neuen Schuhe</span>
-    <form name="Formular" action="">
-      <input type="text" name="Eingabe" size="3">
-      <input type="button" value="Quadrat errechnen" onclick="Quadrat()">
-    </form>
-		  </body>
+  <body onLoad="prize();" action="">
+    <h1>Die neue Kollektion auf einen Blick!</h1>
+      <form name="collection">
+        <div id="shoe-collection">
+          <div class="image">
+          	<img src="shoes1.jpg"></img>
+            <input type=checkbox name="prize[]" value="32" onClick="prize()">32 &euro;
+          </div>
+          <div class="image">
+            <img src="shoes2.jpg"></img>
+            <input type=checkbox name="prize[]" value="19" onClick="prize()">19 &euro;
+          </div>
+          <div class="image">
+            <img src="shoes3.jpg"></img>
+            <input type=checkbox name="prize[]" value="25" onClick="prize()">25 &euro;
+          </div>
+          <div class="image">
+            <img src="shoes4.jpg"></img>
+            <input type=checkbox name="prize[]" value="39" onClick="prize()">39 &euro;
+          </div>
+          <div class="image">
+            <img src="shoes5.jpg"></img>
+            <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+          </div>
+        </div>
+        <div id="prize-container" class="shoes">Einkaufswagen
+          <hr>
+          Gesamtsumme:
+          <textarea cols="5" rows="1" type=text name="sum" value="0" readonly></textarea> &euro;
+        </div>
+      </form>
+	</body>
 </html>
