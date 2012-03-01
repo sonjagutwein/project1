@@ -10,10 +10,13 @@
   
   function prize (){
     var result = 0;
+    var single = "Hallo";
     var i;
     for (i = 0; i < 5; i++)
       if (document.collection.elements[i].checked == true)
         result += Number(document.collection.elements[i].value);
+        single = document.collection.elements[i].value;
+    document.collection.singleprize.value = single;
     document.collection.sum.value = result;
   }
 </script>
@@ -46,6 +49,8 @@
         </div>
         <div id="prize-container" class="shoes">Einkaufswagen
           <hr>
+          <textarea cols="5" rows="5" type=text name="singleprize" value="" readonly></textarea>
+          <br>
           Gesamtsumme:
           <textarea cols="5" rows="1" type=text name="sum" value="0" readonly></textarea> &euro;
           <br>
