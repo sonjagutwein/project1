@@ -1,7 +1,13 @@
+body {
+  background: #F5F6CE;
+}
+
 #shoe-collection {
-  width: 1200px;
-  height: 250px;
-  margin: 50px 30px;
+  width: 1130px;
+  height: 140px;
+  margin: 60px 100px 40px 100px;
+  background-color: white;
+  border: solid 2px black;
 }
 
 h1 {
@@ -10,14 +16,24 @@ h1 {
 .image {
   margin: 0px 25px;
   float: left;
-  height: 250px;
-  width: 170px;
+  height: 120px;
+  width: 98px;
   text-align: center;
+  z-index: 1;
 }
 
 #prize-container {
   width: 1200px;
   margin: 50px 30px;
+}
+
+#drag-container { 
+  width: 1000px; 
+  height: 140px; 
+  border: solid 1px black;
+  position: relative; 
+  float: left;
+  background-color: white;
 }
 
 .shoes {
@@ -26,4 +42,5 @@ h1 {
 
 #shopping-basket {
   margin-top: 15px;
+  float: left;
 }
