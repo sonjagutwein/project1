@@ -5,71 +5,58 @@
   <head>
     <title>Hallo</title>
   <link rel=stylesheet type="text/css" href="style.css">
+  <script src="shoes.js" type="text/javascript"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
   <script type="text/javascript" src="jquery-ui-1.8.18.custom.min.js"></script>
-  <script type="text/javascript">
-<!--
-  $(document).ready(function(){
-    $("#img1").draggable();
-    $("#img2").draggable();
-    $("#img3").draggable();
-    $("#img4").draggable();
-    $("#img5").draggable();
-    
-  });
-
-  $(function() {
-    $( "#shoe-collection, #drag-container" ).sortable({
-      connectWith: ".connectedSortable"
-    }).disableSelection();
-  });
-
-   jQuery.contains($('#img1'), $('#drag-container')); // true
-     document.collection.elements[1].checked = true;
-     prize();
-  //droppable kommt noch dazu
- 
-
-  function prize (){
-    var result = 0;
-    var single = "";
-    var i;
-    for (i = 0; i < 5; i++)
-      if (document.collection.elements[i].checked == true)
-        single = single + (document.collection.elements[i].value+"\n");
-        result += Number(document.collection.elements[i].value);
-        document.collection.sum.value = result;
-        document.collection.singleprize.value = single;
-  }
-
-</script>
-<style type="text/css"></style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript" src="easypaginate/easypaginate/js/easypaginate.js"></script>
+  <style type="text/css"></style>
   </head>
   <body onLoad="prize();" action="">
     <h1>Die neue Kollektion auf einen Blick!</h1>
       <form name="collection">
+        <div id="pagination">
+        <div class="prev">Previous</div>
         <div id="shoe-collection" class="connectedSortable">
-          <div id="img1" class="image">
-          	<img src="shoes1.jpg"></img>
-            <input type=checkbox name="prize[]" value="32" onClick="prize()">32 &euro;
-          </div>
-          <div id="img2" class="image">
-            <img src="shoes2.jpg"></img>
-            <input type=checkbox name="prize[]" value="19" onClick="prize()">19 &euro;
-          </div>
-          <div id="img3" class="image">
-            <img src="shoes3.jpg"></img>
-            <input type=checkbox name="prize[]" value="25" onClick="prize()">25 &euro;
-          </div>
-          <div id="img4" class="image">
-            <img src="shoes4.jpg"></img>
-            <input type=checkbox name="prize[]" value="39" onClick="prize()">39 &euro;
-          </div>
-          <div id="img5" class="image">
-            <img src="shoes5.jpg"></img>
-            <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            <div id="img1" class="image">
+            	<img src="shoes1.jpg"></img>
+              <input type=checkbox name="prize[]" value="32" onClick="prize()">32 &euro;
+            </div>
+            <div id="img2" class="image">
+              <img src="shoes2.jpg"></img>
+              <input type=checkbox name="prize[]" value="19" onClick="prize()">19 &euro;
+            </div>
+            <div id="img3" class="image">
+              <img src="shoes3.jpg"></img>
+              <input type=checkbox name="prize[]" value="25" onClick="prize()">25 &euro;
+            </div>
+            <div id="img4" class="image">
+              <img src="shoes4.jpg"></img>
+              <input type=checkbox name="prize[]" value="39" onClick="prize()">39 &euro;
+            </div>
+            <div id="img5" class="image">
+              <img src="shoes5.jpg"></img>
+              <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            </div>
+            <div id="img6" class="image">
+              <img src="shoes6.jpg"></img>
+              <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            </div>
+            <div id="img7" class="image">
+              <img src="shoes7.jpg"></img>
+              <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            </div>
+            <div id="img8" class="image">
+              <img src="shoes8.jpg"></img>
+              <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            </div>
+            <div id="img9" class="image">
+              <img src="shoes9.jpg"></img>
+              <input type=checkbox name="prize[]" value="29" onClick="prize()">29 &euro;
+            </div>
           </div>
         </div>
+        <div class="next">Next</div>
         <div id="prize-container" class="shoes">Einkaufswagen
           <hr>
           <textarea cols="10" rows="5" type=text name="singleprize" readonly></textarea>

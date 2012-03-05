@@ -1,20 +1,22 @@
 body {
   background: #F5F6CE;
+  margin: 15px 50px;
 }
 
 #shoe-collection {
   width: 1130px;
   height: 140px;
-  margin: 60px 100px 40px 100px;
+  margin: 30px 30px 40px 55px;
   background-color: white;
   border: solid 2px black;
+  overflow: hidden;
 }
 
 h1 {
   margin-left: 25px;
 }
 .image {
-  margin: 0px 25px;
+  margin: 0px 52px;
   float: left;
   height: 120px;
   width: 98px;
@@ -34,6 +36,7 @@ h1 {
   position: relative; 
   float: left;
   background-color: white;
+  margin-left: 30px;
 }
 
 .shoes {
@@ -43,4 +46,30 @@ h1 {
 #shopping-basket {
   margin-top: 15px;
   float: left;
+}
+
+.prev {
+  display: block;
+  color: red;
+  background: url('prev.jpg');
+  width: 35px;
+  height: 50px;
+  float: left;
+  top: 130px;
+  position: absolute;
+  text-indent: -1000px;
+  cursor: pointer;
+}
+
+.next {
+  display: block;
+  background: url('next.jpg');
+  width: 35px;
+  height: 50px;
+  float: left;
+  top: 130px;
+  position: absolute;
+  text-indent: 1000px;
+  left: 1255px;
+  cursor: pointer;
 }
