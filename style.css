@@ -4,9 +4,9 @@ body {
 }
 
 #shoe-collection {
-  width: 1130px;
+  width: 900px;
   height: 140px;
-  margin: 30px 30px 40px 55px;
+  margin: 40px 30px 40px 180px;
   background-color: white;
   border: solid 2px black;
   overflow: hidden;
@@ -16,7 +16,7 @@ h1 {
   margin-left: 25px;
 }
 .image {
-  margin: 0px 52px;
+  margin: 5px 63px;
   float: left;
   height: 120px;
   width: 98px;
@@ -50,12 +50,12 @@ h1 {
 
 .prev {
   display: block;
-  color: red;
   background: url('prev.jpg');
   width: 35px;
   height: 50px;
   float: left;
-  top: 130px;
+  top: 145px;
+  left: 165px;
   position: absolute;
   text-indent: -1000px;
   cursor: pointer;
@@ -67,9 +67,9 @@ h1 {
   width: 35px;
   height: 50px;
   float: left;
-  top: 130px;
+  top: 145px;
   position: absolute;
   text-indent: 1000px;
-  left: 1255px;
+  left: 1160px;
   cursor: pointer;
 }
